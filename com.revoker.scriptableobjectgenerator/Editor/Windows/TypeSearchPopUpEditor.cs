@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -38,25 +37,6 @@ namespace Scripts.Editor.ScriptableObjectGenerator
             window.position = new Rect(windowPosition.x, windowPosition.y, 300, 400);
             window.onTypeSelected = onSelected;
             window.ShowPopup();
-        }
-
-        [MenuItem("Tools/CloseAllOpened")]
-        public static void CloseAllWindows()
-        {
-
-            object[] allWindows = Resources.FindObjectsOfTypeAll(typeof(TypeSearchPopUpEditor));
-
-            foreach (var item in allWindows)
-            {
-                if (item != null)
-                {
-                    TypeSearchPopUpEditor window = item as TypeSearchPopUpEditor;
-                    if (window != null)
-                    {
-                        window.Close();
-                    }
-                }
-            }
         }
 
         private void OnLostFocus()

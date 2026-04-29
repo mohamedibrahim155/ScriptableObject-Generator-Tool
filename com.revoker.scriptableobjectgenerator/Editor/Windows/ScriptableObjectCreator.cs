@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.PackageManager;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 namespace Scripts.Editor.ScriptableObjectGenerator
@@ -42,6 +39,8 @@ namespace Scripts.Editor.ScriptableObjectGenerator
 
         private void OnGUI()
         {
+            if (currentWindow == null) return;
+
             DrawHeader();
 
             DrawMainSettings();
@@ -314,10 +313,6 @@ namespace Scripts.Editor.ScriptableObjectGenerator
                         ShowFieldContextMenu(i);
                         Event.current.Use();
                     }
-
-                    //EditorGUILayout.LabelField("Preview", EditorStyles.boldLabel);
-                    //EditorGUILayout.HelpBox(GetFieldType(fieldDef), MessageType.None);
-
 
                     bool isFieldValid = SOValidator.ValidateField(fieldDef, out string errotField);
 
