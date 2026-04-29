@@ -27,7 +27,12 @@ A  Unity Editor tool to **quickly create ScriptableObject scripts and assets** w
 
 ## 📸 Preview
 
-> *(Add screenshots here of your tool UI, type search popup, and generated script)*
+> <img width="450" height="700" alt="image" src="https://github.com/user-attachments/assets/4a5c34f2-8bc5-46a5-8126-eedf48e165a5" />
+
+Field Types
+> <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/dfba6b71-78db-444b-9e23-97890900a5d0" />
+
+
 
 ---
 
@@ -74,11 +79,14 @@ SOGenerator/
 
 ## 🧑‍💻 How to Use
 
-1. Open the tool:
+1. Open the Unity project:
 
 ```text
 Tools → Scriptable Object Generator
 ```
+
+<img width="858" height="130" alt="image" src="https://github.com/user-attachments/assets/75536d81-e169-40d7-a4af-d09a2fea9324" />
+
 
 2. Fill in:
 
